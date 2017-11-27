@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+.hidden_element {
+    display: none; }
+  
+  .center-text {
+    text-align: center; }
+    .center-text h1 {
+      margin: 0 auto; }
+  
+  .pill-pall-title {
+    margin-top: 10px;
+    margin-bottom: 20px; }
+  
+  .chart_js_chart {
+    position: relative; }
+  
+  .pillpal_charts {
+    background-color: rgba(138, 138, 138, 0.2);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding-top: 25px;
+    padding-bottom: 25px; }
+  
+  .pillpal-module {
+    background-color: rgba(138, 138, 138, 0.2);
+    height: 450px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding: 25px 30px; }
+    .pillpal-module .float_block_div {
+      overflow: auto;
+      margin-bottom: 20px; }
+    .pillpal-module .align_left {
+      float: left;
+      display: block; }
+    .pillpal-module .buffer {
+      overflow: hidden;
+      display: block; }
+    .pillpal-module .align_right {
+      float: right;
+      display: block; }
+    .pillpal-module .search-box {
+      width: 100%; }
+      .pillpal-module .search-box input {
+        width: 100%; }
+      .pillpal-module .search-box .container-1 {
+        white-space: nowrap; }
+        .pillpal-module .search-box .container-1 input {
+          height: 30px;
+          background: #fafafa;
+          border: none;
+          font-size: 10pt;
+          color: #63717f;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px; }
+    .pillpal-module .med-list {
+      background-color: rgba(138, 138, 138, 0.15);
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      display: flex;
+      margin-top: 25px;
+      flex-flow: column;
+      flex-grow: 1;
+      height: 87%;
+      padding: 20px;
+      overflow-y: scroll; }
+    .pillpal-module .pill-module-img {
+      width: 70%;
+      height: 40%; }
+  
+  .add-med-link {
+    color: #2199e8 !important;
+    cursor: pointer;
+    right: 0; }
+.title{
+    font-size: 24px;
+}

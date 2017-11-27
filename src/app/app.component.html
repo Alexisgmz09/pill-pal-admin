@@ -1,20 +1,58 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="container-fluid">
+  <div class="row center-text pill-pall-title">
+      <h1 class="">
+          PillPal
+      </h1>
+  </div>
+  <div class="row pillpal_charts">
+      <div class="col-md-4 pillpal_chart">
+          <canvas class="chart_js_chart" id="active_users_chart"></canvas>
+      </div>
+      <div class="col-md-4 pillpal_chart">
+          <canvas class="chart_js_chart" id="sales_chart"></canvas>
+      </div>
+      <div class="col-md-4 pillpal_chart">
+          <canvas class="chart_js_chart" id="top_meds_chart"></canvas>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-6">
+          <div class="pillpal-module">
+              <div class="float_block_div">
+                  <div class="align_left title"><span>Medicines</span></div>
+                  <div class="buffer"></div>
+              </div>
+              <div class="med-list">
+                      <p *ngFor="let medicine of medicines">{{medicine.name}}({{medicine.activeSubstance}}) {{medicien.dose}} ${{medicine.price}} </p>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-6">
+          <div class="pillpal-module">
+              <div class="float_block_div">
+                  <div class="align_left title"><span>Add Medicine</span></div>
+              </div>
+              <div class="form-group ">
+                <div class="col-6">
+                  <label for="name" class="col-1">Name</label>
+                  <input placeholder="Name"class="col-5 form-control" id="name">
+                </div>
+                <label>Dose</label>
+                <input placeholder="Dose"class="form-control">
+                <label>Active Substance</label>
+                <input placeholder="Active Substance"class="form-control">
+                <label>Price</label>
+                <input placeholder="Price"class="form-control">
+                <label>Quantity</label>
+                <input placeholder="Quantity"class="form-control">
+               
+              </div>
+              <button type="submit" class="btn btn-submit"> Save</button>
+          </div>
+      </div>
+  </div>
+</div>
