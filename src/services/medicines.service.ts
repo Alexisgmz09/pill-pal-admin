@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 import { HttpModule, Http, Response,RequestOptions, Headers } from '@angular/http';
 import { Medicine } from '../models/medicines.model';
 
+@Injectable()
 export class MedicinesService {
     apiUrl="http://192.168.100.5:3000/";
     headers = new Headers();
@@ -12,7 +13,7 @@ export class MedicinesService {
     getMedicines():Promise<Medicine[]>{
         return new Promise((resolve,reject) =>{
             this.http.get(
-                this.apiUrl+'medicines',new RequestOptions({
+                this.apiUrl+'medicines_admin',new RequestOptions({
                     headers:this.headers
                 }))
                 .subscribe(
@@ -42,7 +43,11 @@ export class MedicinesService {
                 stock:medicine.stock
             },new RequestOptions({headers:this.headers}))
             .subscribe(res=>{
-                resolve(this.getMedicines());
+                this.getMedicines().then(meds=>{
+                    resolve(meds);
+                }).catch(err=>{
+                    reject(err);
+                });
             },msg=>{
                 reject(msg);
             });

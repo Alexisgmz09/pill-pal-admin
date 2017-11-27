@@ -26,7 +26,7 @@
                   <div class="buffer"></div>
               </div>
               <div class="med-list">
-                      <p *ngFor="let medicine of medicines">{{medicine.name}}({{medicine.activeSubstance}}) {{medicine.dose}} ${{medicine.price}} [{{medicine.stock}}] </p>
+                      <p *ngFor="let medicine of medicines">{{medicine.name}}({{medicine.activeSubstance}}) {{medicine.dose}} ${{medicine.price}} Stock:{{medicine.stock}} </p>
               </div>
           </div>
       </div>
@@ -36,22 +36,22 @@
               <div class="float_block_div">
                   <div class="align_left title"><span>Add Medicine</span></div>
               </div>
-              <div class="form-group ">
+              <form #medicineForm (submit)="addMedicine(medicineForm);"class="form-group ">
                 <div class="col-6">
-                  <label for="name" class="col-1">Name</label>
-                  <input placeholder="Name"class="col-5 form-control" id="name">
+                  <label for="name" class="col-1">Name*</label>
+                  <input requiered [(ngModel)]="name" placeholder="Name"class="col-5 form-control" id="name" name="name">
                 </div>
-                <label>Dose</label>
-                <input placeholder="Dose"class="form-control">
-                <label>Active Substance</label>
-                <input placeholder="Active Substance"class="form-control">
-                <label>Price</label>
-                <input placeholder="Price"class="form-control">
-                <label>Quantity</label>
-                <input placeholder="Quantity"class="form-control">
-               
-              </div>
-              <button type="submit" class="btn btn-submit"> Save</button>
+                <label>Dose*</label>
+                <input requiered [(ngModel)]="dose" placeholder="Dose"class="form-control" name="dose">
+                <label>Active Substance*</label>
+                <input required [(ngModel)]="activeSubstance" placeholder="Active Substance"class="form-control" name="activeSubstance" >
+                <label>Price*</label>
+                <input required [(ngModel)]="price" placeholder="Price"class="form-control" name="price">
+                <label>Quantity*</label>
+                <input required [(ngModel)]="stock" placeholder="Quantity"class="form-control" name="stock">
+                <br/>
+                <button type="submit" class="btn btn-submit"> Save</button>
+              </form>
           </div>
       </div>
   </div>
