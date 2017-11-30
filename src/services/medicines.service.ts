@@ -63,7 +63,7 @@ export class MedicinesService {
                         med.name,
                         med.activeSubstance,
                         med.dose,0,
-                        med.stock);
+                        med.count);
                 }));
             },msg=>{
                 reject(msg);
@@ -80,7 +80,7 @@ export class MedicinesService {
                         med.name,
                         med.activeSubstance,
                         med.dose,0,
-                        med.stock);
+                        med.count);
                 }));
             },msg=>{
                 reject(msg);
